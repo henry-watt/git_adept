@@ -43,4 +43,9 @@ view: order_items {
     type: count
     drill_fields: [id, orders.id, inventory_items.id]
   }
+
+  measure: zero {
+    type: number
+    sql: 0 ;;
+  }
 }
