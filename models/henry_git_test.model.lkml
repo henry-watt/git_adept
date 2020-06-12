@@ -28,6 +28,8 @@ explore: inventory_items {
 }
 
 explore: order_items {
+  label: "labeltest"
+  view_label: "viewlabeltest"
   join: orders {
     type: left_outer
     sql_on: ${order_items.order_id} = ${orders.id} ;;
@@ -35,6 +37,7 @@ explore: order_items {
   }
 
   join: inventory_items {
+    view_label: "labeltest"
     type: left_outer
     sql_on: ${order_items.inventory_item_id} = ${inventory_items.id} ;;
     relationship: many_to_one
@@ -74,5 +77,7 @@ explore: user_data {
 }
 
 explore: users {}
+
+explore: type_number_id_test {}
 
 #£FFF
